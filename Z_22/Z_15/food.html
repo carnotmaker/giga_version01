@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+    <canvas id="rainCanvas"></canvas>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="../index.html">首頁</a></li>
+                <li class="has-submenu">
+                    <a href="Z_13\112111113_finish\travel.html">風景</a>
+                </li>
+                <li class="has-submenu">
+                    <a href="food.html">美食</a>
+                    <ul class="submenu">
+                        <li><a href="#introduce-section">基隆的美食故事</a></li>
+                        <li><a href="#introduce-title">在地人推薦必吃小吃</a></li>
+                        <li><a href="#cards">抽卡牌</a></li>
+                        <li><a href="#map">地圖</a></li>
+                        <li><a href="#information">其他資訊</a></li>
+                    </ul>
+                </li>
+                <li><a href="activity.html">活動</a></li>
+                <li><a href="culture.html">文化</a></li>
+                <li><a href="shopping.html">購物</a></li>
+                <li><a href="transportation.html">交通</a></li>
+                <li><a href="stay.html">住宿</a></li>
+                <li><a href="special_market.html">特色市集</a></li>
+                <li><a href="sightseeing_guide.html">觀光導覽</a></li>
+                <li class="has-submenu">
+                    <a href="#">關於我們</a>
+                    <ul class="submenu">
+                        <li><a href="Z_13\112111113_finish\about112111113.html">112111113</a></li>
+                        <li><a href="personal.html">112111115</a></li>
+                        <li><a href="../me112111122.html">112111122</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div>
+         <ul class="slides">
+
+
+            <input type="radio" id="control-1" name="control" checked>
+            <input type="radio" id="control-2" name="control">
+            <input type="radio" id="control-3" name="control">
+
+            <li class="slide"><img src="img/night market.png">            <h1 data-aos="fade-left">探索基隆美食</h1>
+                <h3 class="h3-c"  data-aos="fade-right">一場味蕾的冒險</h3>
+                <img src="img/watercolor.png" alt="" class="watercolor">
+                <h3 class="english" data-aos="fade-top">FOOD</h3></li>
+            <li class="slide"><img src="img/night market-2.png" alt=""></li>
+            <li class="slide"><img src="img/night market food-3.png"></li>
+
+            <div class="controls-visible">
+                <label for="control-1"></label>
+                <label for="control-2"></label>
+                <label for="control-3"></label>
+            </div>
+        </ul>
+    </div>
+    <section class="introduce-section" id="introduce-section">
+        <h2 class="introduce-title" data-aos="fade-left">基隆的<span class="span1">美食故事</span></h2>
+        <p class="introduce">基隆，這座位於台灣北端的城市，不僅擁有悠久的歷史，還是一個<span class="span2">充滿活力的文化交匯點</span>。作為台灣的主要交通樞紐，基隆長久以來是東西方食材與烹飪技藝的交融地。無論是<span class="span2">傳統的台灣小吃</span>，還是來自世界各地的異國風味，基隆的美食總是充滿多元與驚喜。在這裡，海鮮、米飯、麵食等經典台灣菜肴經過當地獨特的處理方式，呈現出一種<span class="span2">無與倫比的風味</span>。每一道菜肴背後，都蘊含著基隆<span class="span2">這座港口城市的歷史與故事</span>。無論是繁華的夜市，還是隱匿在巷弄裡的小店，每一口食物都充滿了當地人民的熱情與創意，是對基隆深厚歷史的致敬。來到基隆，品味的不僅僅是美食，更是這座城市的歷史與<span class="span2">人情味</span>。</p>
+    </section>
+    <section>
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+        <div class="marquee-content">
+            <img src="img/maqree/01.jpg" alt="Image 1" class="maqreeimg">
+            <img src="img/maqree/02.jpg" alt="Image 2" class="maqreeimg">
+            <img src="img/maqree/03.png" alt="Image 3" class="maqreeimg">
+            <img src="img/maqree/04.jpg" alt="Image 4" class="maqreeimg">
+            <img src="img/maqree/05.jpg" alt="Image 5" class="maqreeimg">
+            <img src="img/maqree/06.jpg" alt="Image 6" class="maqreeimg">
+            <img src="img/maqree/07.jpg" alt="Image 7" class="maqreeimg">
+            <img src="img/maqree/08.jpg" alt="Image 8" class="maqreeimg">
+            <img src="img/maqree/09.jpg" alt="Image 9" class="maqreeimg">
+            <img src="img/maqree/10.jpg" alt="Image 10" class="maqreeimg">
+        </div>
+        </marquee>
+    </div>
+    </section>
+    <section>
+        <h2 class="introduce-title" data-aos="fade-left" id="introduce-title"><span class="span1">在地人</span>推薦必吃小吃!</h2>
+        <p class="food-p-2" data-aos="fade-up">基隆崁仔頂碳烤三明治<img src="img/sandwich.jpg" class="sandwich"></p>
+        <p class="food-p-3" data-aos="fade-up">三沙灣麵線羹<img src="img/Sanshawan_noodle_soup.jpg" class="Sanshawan_noodle_soup"></p>
+        <p class="food-p-4" data-aos="fade-up">菊姐大腸圈<img src="img/Large_intestine_circle.jpg" class="Large_intestine_circle"></p>
+        <p class="food-p-5" data-aos="fade-up">魚丸伯仔<img src="img/Fish_Ball.jpg" class="Fish_Ball"></p>
+    </section>
+    <section>
+        <section id="cards">
+            <img src="img/noodle.png" class="card-1"   data-name="noodle.png" alt="noodle">
+            <img src="img/rice.png" class="card-2"   data-name="rice.png" alt="rice">
+            <img src="img/stone_hot_pot.png" alt="" class="card-3" data-name="stone_hot_pot.png" alt="stone_hot_pot">
+            <img src="img/Curry_meatloaf.png" alt="" class="card-4" data-name="Curry_meatloaf.png" alt="Curry_meatloaf">
+            <img src="img/Pork_Knuckles_in_White_Soup.png" alt="" class="card-5" data-name="Pork_Knuckles_in_White_Soup.png" alt="Pork_Knuckles_in_White_Soup">
+            <img src="img/Siomai.png" alt="" class="card-6" data-name="Siomai.png" alt="Siomai">
+            <img src="img/Ah_Hua_Fried_Noodles.png" alt="" class="card-7" data-name="Ah_Hua_Fried_Noodles.png" alt="Ah_Hua_Fried_Noodles">
+            <img src="img/Big_wontons.png" alt="" class="card-8" data-name="Big_wontons.png" alt="Big_wontons">
+            <img src="img/Three_Brothers_Douhua.png" alt="" class="card-9" data-name="Three_Brothers_Douhua.png" alt="Three_Brothers_Douhua">
+        </div>
+    </section>
+
+<section>
+    <div id="text-container">
+        <div id="intro" class="tech-text">
+            <b><p class="food-p">基隆乾麵</p></b>
+            基隆乾麵中一大部分歸類為廣東麵，而廣東麵究竟指的是一種麵食製程或單指麵條種類，尚未有定論，不過大抵的畫面是那竹製或鐵製面篩內，有著細扁的白乾麵條（重點），幾葉韭菜段、豆芽苗，滾沸待足時，起篩一抖做「切」，盛碗後，澆一匙豬油蔥酥、一匙特製醬油，上桌添兩片白切里肌肉（或紅糟肉）見客。
+            <br><br>
+            說之樸素？基隆乾麵變化絕不僅止於此，除了相當特色的白扁麵（廣東麵），熟門熟路的老基隆人會指名要求細麵，細麵口感比之福州意麵稍稍結實一些。額外添上一顆半熟蛋包，更是上層樓的美味。
+            <br><br>
+            端看店家桌面除提供辣椒、烏醋等基本醬料，自製的甜辣醬更是各家的風味競技場，不過也有像「阿本燒賣」直接淋在麵頂的，嚐來甜鹹合度、油香迷人，入喉滑順，簡直是作弊級的好吃。
+        </div>
+    </div>
+    
+    <div id="intro" class="tech-text2">
+        <b><p class="food-p">滷肉飯</p></b>
+        滷肉飯乃是台灣之國食，有所追求，簡單一碗可不簡單。
+    
+        首先豬後腿肉為求口感，禁不起機絞也不得狡，手工切至皮、肥、瘦肉比例恰好的那一條，滷製色澤則端看店家派系，醬甜、鹹香色深色淺無一標準，可肥肉狀態要求呈晶凍狀，口感為室溫奶油最佳。米飯之選，能吸附滷汁之稍稍鬆散新陳米，帶Q勁嚼感為上乘。
+    
+        小吃之份量應如點心般，見基隆廟口之淺瓷碗即可知，飯量約莫握拳大小，飄灑進碗中的滷汁，所求肉塊勻稱覆飯頂約莫七八，食畢應不見滷汁殘於碗底，若殘碗底，一是過多，二則是飄灑不均肉汁肅降碗底，飯粒發脹，食相粗糙難看。擱在碗緣的那一味-漬物，自識滷肉飯以來少見店家提供，至今也沒碰上喜歡的，但吃來平衡，能做到口腔換味、轉味之動作即可。
+    
+        基隆滷肉飯之盛，若要一一列舉評比，想不必了。但售好的滷肉飯店家大致上有兩種類型，第一是如基隆廟口專售滷肉飯之店家，配菜湯品簡廉，品項至多三到四樣，來盤油光鋥亮的水煮高麗菜、同肉汁滷煮的鴨蛋、沾食辣椒醬油的筍片腿肉湯，重味者來盤蔥爆肉絲，都是令人魂牽夢縈的組合。
+    </div>
+    
+    <div id="intro" class="tech-text3">
+        <b><p class="food-p">石頭火鍋</p></b>
+        石頭火鍋的獨特之處在於其以爆香熱炒為開端。在用餐前，食材會經過短暫的熱炒，這不僅能夠激發食材本身的香氣，更能讓香味充分溢出，令人食指大動。這種熱炒的過程，將食材的風味最大化，那一瞬間就是和美味近距離接觸的時候。
+    </div>
+    
+    <div id="intro" class="tech-text4">
+        <b><p class="food-p">咖哩肉餅</p></b>
+        採用印度咖哩製作出細緻的餅皮搭上香醇的純綠豆餡包裹著嚴選黑毛豬肉，充分融合成半鹹半甜的完美組合，細緻鬆香口感讓自然香氣散發在口中。
+    </div>
+    
+    <div id="intro" class="tech-text5">
+        <b><p class="food-p">白湯豬腳</p></b>
+        白湯豬腳的湯頭多用豬腳加大骨熬製，不但能強化膠質，更增添香醇風味，因此白湯豬腳的湯是用來牛飲的；醬油滷製的豬腳則例不喝湯，最多用來澆飯。
+    </div>
+    
+    <div id="intro" class="tech-text6">
+        <b><p class="food-p">燒賣</p></b>
+        燒賣是一種傳統的中式點心，通常會依口味的不同，將豬肉混合蝦仁、魚籽、紅蘿蔔等食材，包裹於薄嫩的麵皮中。 而其外型精緻小巧，方便食用，無論作為正餐或點心都很適合，可是港式餐廳中非常受歡迎的美食。
+    </div>
+    
+    <div id="intro" class="tech-text7">
+        <b><p class="food-p">阿華炒麵</p></b>
+        阿華炒麵這種咖哩跟我們常見的咖哩很不一樣，但基隆這邊的咖哩好像都是這種土黃色咖哩，上桌就可以聞到很濃的咖哩香氣，然後份量真的蠻大的，炒麵堆的尖尖的！咖哩炒麵的配料有蝦子、豬肝、洋蔥、吉古拉、肉片，配料相當豐富，咖哩醬汁感也是很濃稠的那種，麵條均勻的包裹醬汁，看起來就很夠味！
+    </div>
+    
+    <div id="intro" class="tech-text8">
+        <b><p class="food-p">大餛飩</p></b>
+        餛飩是一種以薄麵皮包餡的麵粉製品，但不同於餃子。 古代華夏人認為這是一種密封的包，稱為渾沌，依據漢字造字的規則，後來才稱為餛飩。在南北朝到唐代，餛飩或主流稱為渾沌餅，且形如偃月，更接近於今天的水餃。
+    </div>
+    
+    <div id="intro" class="tech-text9">
+        <b><p class="food-p">三兄弟豆花</p></b>
+        豆花，中國北方稱為豆腐腦，是由黃豆漿絮凝後形成的口感近似於果凍或布丁狀食品統稱，質地比豆腐嫩軟，是一種常見小吃、甜點。
+    </div>
+</section>
+
+<div class="icon">
+    <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram fa-2xl" style="color: #c653a1;"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter fa-2xl" style="color: #5cb0f0;"></i></a>
+</div>
+
+<section id="map"></section>
+    
+    <script src="js/food.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+    AOS.init();
+    var map = L.map('map').setView([25.0330, 121.5654], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var locations = [
+  { lat: 25.130620996343563, lng: 121.73907530925688, title: "基隆乾麵", description: "基隆人的早餐特色之一。", website: "https://www.google.com/maps/place/%E9%98%BF%E5%BF%A0%E5%8F%A4%E6%97%A9%E9%BA%B5%E5%BA%97/@25.1303219,121.7390761,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipN9xUFyU1n22_QfClVdxNHw9mtzEbXUhUvUiaQK!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN9xUFyU1n22_QfClVdxNHw9mtzEbXUhUvUiaQK%3Dw203-h152-k-no!7i1600!8i1200!4m7!3m6!1s0x345d4e145150ed13:0xd4da3924896c33d6!8m2!3d25.1303879!4d121.7391075!10e5!16s%2Fg%2F11cmvhtjkc?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.12850421503685, lng: 121.74329314033662, title: "滷肉飯", description: "這家可是位於基隆廟口夜市的攤販，評論有4.3顆星。", website: "https://www.google.com/maps/place/%E5%A4%A9%E4%B8%80%E9%A6%99%E8%82%89%E7%84%BF%E9%A0%86/@25.1283488,121.7432475,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMKAQPr6rldYx66bO9jP1XQ04hjw9TCzL8ydBG4!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMKAQPr6rldYx66bO9jP1XQ04hjw9TCzL8ydBG4%3Dw114-h86-k-no!7i4032!8i3024!4m7!3m6!1s0x345d4e3e19dd262b:0x5978419f31c63a2a!8m2!3d25.1283431!4d121.7432433!10e5!16s%2Fg%2F1tfjyll9?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.131268092515786, lng: 121.74594640000001, title: "石頭火鍋", description: "這間火鍋店非常平價，而且每天人都是爆滿的狀態。", website: "https://www.google.com/maps/place/%E7%BE%A9%E7%BE%8E%E7%9F%B3%E9%A0%AD%E7%81%AB%E9%8D%8B/@25.1312001,121.7459464,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipO9zSmgtDbkv-risczzMwoRYxWnDSdTOGXS0S0o!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO9zSmgtDbkv-risczzMwoRYxWnDSdTOGXS0S0o%3Dw203-h136-k-no!7i5709!8i3836!4m17!1m9!3m8!1s0x345d4e3f719affab:0x10871e99cde6519f!2z576p576O55-z6aCt54Gr6Y2L!8m2!3d25.1311378!4d121.7459039!9m1!1b1!16s%2Fg%2F1vzv1f5s!3m6!1s0x345d4e3f719affab:0x10871e99cde6519f!8m2!3d25.1311378!4d121.7459039!10e5!16s%2Fg%2F1vzv1f5s?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.137607121192055, lng: 121.75112354179497, title: "咖哩肉餅", description: "招牌咖哩餅外皮非常酥鬆且帶有甜味，讓咖哩餅整體更有層次感。", website: "https://www.google.com/maps/place/%E5%A4%A7%E6%96%B0%E9%A4%85%E5%BA%97/@25.1373844,121.750968,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMMBjnvbj3nz2XISxzVCO7Vhu8zF-FTUiMP6Te0!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMMBjnvbj3nz2XISxzVCO7Vhu8zF-FTUiMP6Te0%3Dw86-h115-k-no!7i730!8i980!4m17!1m9!3m8!1s0x345d4e45b4e02215:0x7c240e9463a5e005!2z5aSn5paw6aSF5bqX!8m2!3d25.1373449!4d121.7509948!9m1!1b1!16s%2Fg%2F11g_v2hsc!3m6!1s0x345d4e45b4e02215:0x7c240e9463a5e005!8m2!3d25.1373449!4d121.7509948!10e5!16s%2Fg%2F11g_v2hsc?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.128979547400814, lng: 121.74380549994905, title: "白湯豬腳", description: "豬腳肉很嫩，湯很濃郁，而且份量很多。", website: "https://www.google.com/maps/place/%E5%9F%BA%E9%9A%86%E7%B4%80%E5%AE%B6%E8%B1%AC%E8%85%B3%E5%8E%9F%E6%B1%81%E5%B0%88%E5%AE%B6(%E5%BF%85%E5%90%83%E7%BE%8E%E9%A3%9F%E3%80%81%E5%B9%B3%E5%83%B9%E5%B0%8F%E5%90%83%E3%80%81%E4%BA%BA%E6%B0%A3%E9%8A%85%E6%9D%BF%E6%96%99%E7%90%86)/@25.1288154,121.7439055,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMKXB7FUXvvbPnCogl0zgLhohT08mIxucYCarE9!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMKXB7FUXvvbPnCogl0zgLhohT08mIxucYCarE9%3Dw203-h145-k-no!7i5712!8i4102!4m11!1m2!2m1!1z5p6X5a625Y6f5rGB6LGs6IWz!3m7!1s0x345d4fb5e9c5696d:0xac79d453b0111865!8m2!3d25.1288727!4d121.7438055!10e5!15sChLmnpflrrbljp_msYHosazohbNaGCIW5p6X5a62IOWOnyDmsYEg6LGsIOiFs5IBCnJlc3RhdXJhbnTgAQA!16s%2Fg%2F1thxyjm2?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.13352147403503, lng: 121.74706251593935, title: "燒賣", description: "這間有賣很多的台灣小吃，聽說燒賣很大顆而且價格又實惠。", website: "https://www.google.com/maps/place/%E5%8F%B0%E7%81%A3%E5%B0%8F%E5%90%83+%E6%97%97%E9%AD%9A%E9%BA%B5%E7%B7%9A%EF%BC%8C%E6%97%97%E9%AD%9A%E6%B9%AF/@25.1332572,121.746799,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipOUUuupMYvLm4BpvBIWkzobIWgsm22EDoYZH3uT!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOUUuupMYvLm4BpvBIWkzobIWgsm22EDoYZH3uT%3Dw114-h86-k-no!7i4032!8i3024!4m17!1m9!3m8!1s0x345d4e40c2eed645:0x35396095db2d9192!2z5Y-w54Gj5bCP5ZCDIOaXl-mtmum6tee3mu-8jOaXl-mtmua5rw!8m2!3d25.1333661!4d121.7468479!9m1!1b1!16s%2Fg%2F1v3kf6zv!3m6!1s0x345d4e40c2eed645:0x35396095db2d9192!8m2!3d25.1333661!4d121.7468479!10e5!16s%2Fg%2F1v3kf6zv?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.128813, lng: 121.743823, title: "阿華炒麵", description: "基隆著名炒麵店。", website: "https://www.google.com/maps/place/%E9%98%BF%E8%8F%AF%E7%82%92%E9%BA%B5/@25.1278806,121.7432976,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipM0cyfbvMSsmV7uvW_5p57rgkMS0jEpAoiiAw8P!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipM0cyfbvMSsmV7uvW_5p57rgkMS0jEpAoiiAw8P%3Dw203-h203-k-no!7i1592!8i1592!4m7!3m6!1s0x345d4e3e05ab5ebb:0xcc39683c9dc7cd21!8m2!3d25.1279239!4d121.7432066!10e5!16s%2Fg%2F1tdrv1l4?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.08360277633252, lng: 121.69595895576983, title: "大餛飩", description: "餛飩很大顆而且超好吃。", website: "https://www.google.com/maps/place/%E6%BA%AB%E5%B7%9E%E5%A4%A7%E9%A4%9B%E9%A3%A9%2F%E9%90%B5%E6%9D%BF%E7%87%92%E7%87%B4%E9%A3%AF%2F%E7%82%92%E9%BA%B5%2F%E7%82%92%E6%9D%BF%E6%A2%9D/@25.0832199,121.6960341,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMJVRgO0WZPAy3_hI6uxBKgeymqGKzcTWzmX_VY!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMJVRgO0WZPAy3_hI6uxBKgeymqGKzcTWzmX_VY%3Dw203-h202-k-no!7i3024!8i3023!4m11!1m2!2m1!1z5aSn6aSb6aOpIOWfuumahg!3m7!1s0x345d524a7ab2db51:0x67f877bd90894333!8m2!3d25.0833307!4d121.6960126!10e5!15sChDlpKfppJvpo6kg5Z-66ZqGWhMiEeWkpyDppJvpo6kg5Z-66ZqGkgELbm9vZGxlX3Nob3DgAQA!16s%2Fg%2F11cmry507f?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" },
+  { lat: 25.128439385290232, lng: 121.74353279206265, title: "三兄弟豆花", description: "基隆非常有名、位於基隆廟口夜市的豆花店，品項很多很推薦。", website: "https://www.google.com/maps/place/%E5%9F%BA%E9%9A%86%E4%B8%89%E5%85%84%E5%BC%9F%E8%B1%86%E8%8A%B1/@25.1284008,121.7436154,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipOm111W5dExnlNRh34KXiwMHY8oYHCDKBeCOBkF!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOm111W5dExnlNRh34KXiwMHY8oYHCDKBeCOBkF%3Dw86-h114-k-no!7i3024!8i4032!4m7!3m6!1s0x345d4e3e6aaa6e23:0xc60c3446a60b30d2!8m2!3d25.1283617!4d121.743683!10e5!16s%2Fg%2F1tfl_5w4?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" }
+];
+
+locations.forEach(function(location) {
+  L.marker([location.lat, location.lng])
+    .addTo(map)
+    .bindPopup(`
+      <b>${location.title}</b><br>
+      ${location.description}<br>
+      <a href="${location.website}" target="_blank">查看詳情</a>
+    `);
+});
+    </script>
+
+    <div class="wave"></div>
+    <footer id="information">
+        <div class="left">
+            <h2>聯絡我們:</h2>
+            <h3>09xxxxxxxx</h3>
+            <a href="mailto:123456789@gmail.com"><h3>123456789@gmail.com</h3></a>
+        </div>
+        <div class="center">
+            <a href=""><h2 class="footer-nav">首頁</h2></a>
+            <a href=""><h2 class="footer-nav">基隆歷史</h2></a>
+            <a href=""><h2 class="footer-nav">景點</h2></a>
+            <a href=""><h2 class="footer-nav">美食</h2></a>
+            <a href=""><h2 class="footer-nav">留言板</h2></a>
+        </div>
+        <div class="right">
+            <h2 >留言板</h2>
+            <textarea placeholder="在這裡留下你的留言..." rows="6" cols="50"></textarea><br>
+            <button  onclick="submitMessage()">提交</button>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
