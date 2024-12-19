@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我是品承</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dela+Gothic+One&family=Kaisei+Decol&family=Kosugi+Maru&family=Mochiy+Pop+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dela+Gothic+One&family=Kaisei+Decol&family=Kosugi+Maru&family=Mochiy+Pop+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="shortcut icon" href="img/bookmark-solid.svg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, rgb(178, 178, 236), lightblue);
+            background-size: cover;
+        }
+        .header {
+            background: grey;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .photo {
+            width: 250px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        .card {
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        footer {
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h5{
+            font-family: "Caveat", cursive;
+            font-size: 80px;
+        }
+        h2{
+            padding: 20px 0px;
+            font-family: "Mochiy Pop One", sans-serif;
+            font-weight: 500;
+        }
+        h3{
+            font-family: "Kaisei Decol", serif;
+            font-weight: 400;
+        }
+        h4{
+            font-size: 18px;
+            padding: 20px 0px;
+            font-family: "Kaisei Decol", serif;
+        }
+        p{
+            font-size: 20px;
+            font-family: "Kaisei Decol", serif;
+            font-weight: 400;
+        }
+        li{
+            font-family: "Kaisei Decol", serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+        a{
+            color: rgb(16, 146, 96);
+            font-weight: 900;
+        }
+        a:hover{
+            color: coral;
+        }
+        .my-element {
+            animation: flash;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+          }
+          @media screen and (max-width: 640px) {
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            
+              .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #add8e6;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+            }
+          
+            .nav-links.active {
+                display: flex;
+            }
+          
+            .submenu {
+                position: static;
+                box-shadow: none;
+            }
+            .navbar-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #add8e6;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                z-index: 5;
+            }
+          
+            .navbar-items.active {
+                display: flex;
+            }
+          
+          }
+          @media screen and (min-width: 641px) and (max-width: 980px) {
+            body{
+                margin: 0;
+                padding: 0;
+                
+            }
+            .slides{
+                max-width: 100%;
+            }
+            h1,.english{
+                font-size: 50px;
+            }
+            .english{
+                letter-spacing: 33px;
+            }
+            h1{
+                transform: translateY(-78px);
+            }
+            .h3-c{
+                margin-left: 100px;
+                transform: translateX(80%);
+            }
+            .food-p-3{
+                margin-top: -10%;
+                margin-bottom: 5%;
+            }
+            .food-p-5{
+                margin-top: 13%;
+            }
+            #cards{
+                max-width: 100%;
+                text-align: center;
+            }
+            #cards img{
+                width: 85.84px;
+                height: 356.03px;
+            }
+            #map{
+                margin-top: 250px;
+            }
+            .center{
+                margin-left: 110px;
+                transform: translateX(60%);
+            }
+            .footer-nav{
+                width: 100%;
+            }
+            .tech-text6 {
+                opacity: 0;
+                animation: typing 3s steps(50, end), blink-caret 0.75s step-end infinite;
+                position: absolute;
+                left: 10%;
+                transform: translateY(-310%);
+                max-width: 60%;
+            }
+            .tech-text7, .tech-text8, .tech-text9 {
+                opacity: 0;
+                animation: typing 3s steps(50, end), blink-caret 0.75s step-end infinite;
+                position: absolute;
+                left: 10%;
+                transform: translateY(-210%);
+                max-width: 60%;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #add8e6;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+            }
+          
+            .nav-links.active {
+                display: flex;
+            }
+          
+            .submenu {
+                position: static;
+                box-shadow: none;
+            }
+            .navbar-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #add8e6;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                z-index: 5;
+            }
+          
+            .navbar-items.active {
+                display: flex;
+          
+            }
+              
+          }
+          body, h1, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+          }
+          
+          .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #add8e6;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-left: 2px;
+          }
+          
+          .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+          }
+          
+          .nav-links li {
+            position: relative;
+          }
+          
+          .nav-links li a {
+            color: #004080;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            font-size: 14px;
+            transition: background 0.3s ease, color 0.3s ease;
+          }
+          
+          .nav-links li a:hover {
+            background-color: #87ceeb;
+            color: #fff;
+            border-radius: 5px;
+          }
+          
+          .submenu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #87ceeb;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+          }
+          
+          .submenu li {
+            width: 150px;
+          }
+          
+          .submenu li a {
+            padding: 10px;
+            color: #fff;
+            text-transform: none;
+          }
+          
+          .submenu li a:hover {
+            background-color: #add8e6;
+          }
+          
+          .has-submenu:hover .submenu {
+            display: block;
+          }
+          
+          .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+          }
+          
+          .hamburger span {
+            background: #004080;
+            height: 3px;
+            width: 25px;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+          }
+          
+          @media (max-width: 981px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #add8e6;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+            }
+          
+            .nav-links.active {
+                display: flex;
+            }
+          
+            .submenu {
+                position: static;
+                box-shadow: none;
+            }
+          
+            .hamburger {
+                display: flex;
+            }
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="../../../index.html">首頁</a></li>
+                
+                <li class="has-submenu">
+                    <a href="../112111113_finish/travel.html">風景</a>
+                </li>
+                <li class="has-submenu">
+                    <a href="../../food.html">美食</a>
+                    <ul class="submenu">
+                        <li><a href="#introduce-section">基隆的美食故事</a></li>
+                        <li><a href="#introduce-title">在地人推薦必吃小吃</a></li>
+                        <li><a href="#cards">抽卡牌</a></li>
+                        <li><a href="#map">地圖</a></li>
+                        <li><a href="#information">其他資訊</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../Activity.html">活動</a></li>
+                <li><a href="../../culture.html">文化</a></li>
+                <li><a href="../../Shopping.html">購物</a></li>
+                <li><a href="../../transportation.html">交通</a></li>
+                <li><a href="../../stay.html">住宿</a></li>
+                <li><a href="../../special_market.html">特色市集</a></li>
+                <li><a href="../../Sightseeing_guide.html">觀光導覽</a></li>
+                <li class="has-submenu">
+                    <a href="#">關於我們</a>
+                    <ul class="submenu">
+                        <li><a href="../../112111113_html/112111113_finish/about112111113.html">112111113</a></li>
+                        <li><a href="../../personal.html">112111115</a></li>
+                        <li><a href="../../../me112111122.html">112111122</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="header animate__animated animate__bounce">
+        <h5 class="animate__animated  my-element">About me</h5>
+        <p class="animate__animated  my-element">資管2A 112111113</p>
+    </div>
+
+    <div class="container mt-4">
+        <!-- 自我介紹區 -->
+        <div class="row align-items-center" data-aos="fade-right">
+            <div class="col-md-4 text-center animate__animated animate__fadeInDownBig">
+                <img src="img/me.JPG" alt="個人照片" class="photo">
+            </div>
+            <div class="col-md-8 animate__animated animate__fadeInDownBig">
+                <h2>個人資料</h2>
+                <p>姓名：林品承</p>
+                <p>性別：男生</p>
+                <p>生日：2001/06/12</p>
+                <p>星座：雙子座</p>
+                <p>MBTI：ISFJ</p>
+                <p>幹部經歷：班代</p>
+            </div>
+        </div>
+
+        <!-- 學歷區 -->
+        <div class="card" data-aos="flip-left">
+            <div class="card-body">
+                <h3>學歷</h3>
+                <ul>
+                    <li><a href="https://www.cpps.ntpc.edu.tw/">昌平國小</a></li>
+                    <li><a href="https://www.cpjh.ntpc.edu.tw/">中平國中</a></li>
+                    <li><a href="http://www.khvs.ntpc.edu.tw/index_1.htm">光華商職</a></li>
+                    <li><a href="https://www.aeust.edu.tw/">亞東科技大學</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 興趣愛好區 -->
+        <div class="card" data-aos="flip-left">
+            <div class="card-body">
+                <h3>興趣與休閒娛樂</h3>
+                <h4>平常有在關注運動賽事，以棒球與籃球為主；也喜歡球類運動如：羽球；空閒時，則是會追追劇。</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/baseball.jpg" alt="興趣照片1" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/badminton.jpg" alt="興趣照片2" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/watch.jpg" alt="興趣照片3" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 聯絡方式區 -->
+        <div class="card" data-aos="flip-left">
+            <div class="card-body">
+                <h3>聯絡方式</h3>
+                <ul>
+                    <li>Email： <a href="mailto:112111113@mail.aeust.edu.tw">112111113@mail.aeust.edu.tw</a></li>
+                    <li>電話：+886 975 593 426</li>
+                    <li>fb： 林品丞</li>
+                    <li>IG： pin_cheng0612</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer data-aos="fade-up" data-aos-duration="3000">
+        <p>&copy; 2024 aboutme</p>
+    </footer>
+    <script src="js/style.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
