@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基隆旅遊景點介紹</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="shortcut icon" href="img/mountain-city-solid.svg" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        #demo img{
+            height: 400px;
+            width: 100%;
+        }
+        .gotop{
+        margin: 10px;
+        text-align: center;
+        position: fixed;
+        right: 50px;
+        bottom: 10px;
+        font-size: 30px;
+        border-radius: 50%;
+        border-style: solid;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 640px) {
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            
+              .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #add8e6;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+            }
+          
+            .nav-links.active {
+                display: flex;
+            }
+          
+            .submenu {
+                position: static;
+                box-shadow: none;
+            }
+            .navbar-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #add8e6;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                z-index: 5;
+            }
+          
+            .navbar-items.active {
+                display: flex;
+            }
+          
+          }
+          @media screen and (min-width: 641px) and (max-width: 980px) {
+            body{
+                margin: 0;
+                padding: 0;
+                
+            }
+            .slides{
+                max-width: 100%;
+            }
+            h1,.english{
+                font-size: 50px;
+            }
+            .english{
+                letter-spacing: 33px;
+            }
+            h1{
+                transform: translateY(-78px);
+            }
+            .h3-c{
+                margin-left: 100px;
+                transform: translateX(80%);
+            }
+            .food-p-3{
+                margin-top: -10%;
+                margin-bottom: 5%;
+            }
+            .food-p-5{
+                margin-top: 13%;
+            }
+            #cards{
+                max-width: 100%;
+                text-align: center;
+            }
+            #cards img{
+                width: 85.84px;
+                height: 356.03px;
+            }
+            #map{
+                margin-top: 250px;
+            }
+            .center{
+                margin-left: 110px;
+                transform: translateX(60%);
+            }
+            .footer-nav{
+                width: 100%;
+            }
+            .tech-text6 {
+                opacity: 0;
+                animation: typing 3s steps(50, end), blink-caret 0.75s step-end infinite;
+                position: absolute;
+                left: 10%;
+                transform: translateY(-310%);
+                max-width: 60%;
+            }
+            .tech-text7, .tech-text8, .tech-text9 {
+                opacity: 0;
+                animation: typing 3s steps(50, end), blink-caret 0.75s step-end infinite;
+                position: absolute;
+                left: 10%;
+                transform: translateY(-210%);
+                max-width: 60%;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #add8e6;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+            }
+          
+            .nav-links.active {
+                display: flex;
+            }
+          
+            .submenu {
+                position: static;
+                box-shadow: none;
+            }
+            .navbar-items {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #add8e6;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                z-index: 5;
+            }
+          
+            .navbar-items.active {
+                display: flex;
+          
+            }
+              
+          }
+          body, h1, ul, li, a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+          }
+          
+          .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #add8e6;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-left: 2px;
+          }
+          
+          .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+          }
+          
+          .nav-links li {
+            position: relative;
+          }
+          
+          .nav-links li a {
+            color: #004080;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            font-size: 14px;
+            transition: background 0.3s ease, color 0.3s ease;
+          }
+          
+          .nav-links li a:hover {
+            background-color: #87ceeb;
+            color: #fff;
+            border-radius: 5px;
+          }
+          
+          .submenu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #87ceeb;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+          }
+          
+          .submenu li {
+            width: 150px;
+          }
+          
+          .submenu li a {
+            padding: 10px;
+            color: #fff;
+            text-transform: none;
+          }
+          
+          .submenu li a:hover {
+            background-color: #add8e6;
+          }
+          
+          .has-submenu:hover .submenu {
+            display: block;
+          }
+          
+          .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+          }
+          
+          .hamburger span {
+            background: #004080;
+            height: 3px;
+            width: 25px;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+          }
+          
+          @media (max-width: 981px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #add8e6;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                width: 200px;
+                border-radius: 5px;
+            }
+          
+            .nav-links.active {
+                display: flex;
+            }
+          
+            .submenu {
+                position: static;
+                box-shadow: none;
+            }
+          
+            .hamburger {
+                display: flex;
+            }
+          }
+    </style>
+</head>
+<body>
+    <header >
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="../../../index.html">首頁</a></li>
+                <li class="has-submenu">
+                    <a href="../../112111113_html/112111113_finish/travel.html">風景</a>
+                    <ul class="submenu">
+                        <li><a href="#peace-island">和平島</a></li>
+                        <li><a href="#lighthouse">基隆燈塔</a></li>
+                        <li><a href="#badouzi">八斗子海濱公園</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../../food.html">美食</a>
+                    <ul class="submenu">
+                        <li><a href="#introduce-section">基隆的美食故事</a></li>
+                        <li><a href="#introduce-title">在地人推薦必吃小吃</a></li>
+                        <li><a href="#cards">抽卡牌</a></li>
+                        <li><a href="#map">地圖</a></li>
+                        <li><a href="#information">其他資訊</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../Activity.html">活動</a></li>
+                <li><a href="../../culture.html">文化</a></li>
+                <li><a href="../../Shopping.html">購物</a></li>
+                <li><a href="../../transportation.html">交通</a></li>
+                <li><a href="../../stay.html">住宿</a></li>
+                <li><a href="../../special_market.html">特色市集</a></li>
+                <li><a href="../../Sightseeing_guide.html">觀光導覽</a></li>
+                <li class="has-submenu">
+                    <a href="#">關於我們</a>
+                    <ul class="submenu">
+                        <li><a href="../../112111113_html/112111113_finish/about112111113.html">112111113</a></li>
+                        <li><a href="../../personal.html">112111115</a></li>
+                        <li><a href="../../../me112111122.html">112111122</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="col container-fluid">
+        <div class="contianer1 container-fluid"></div>
+        <div class="content1 img1 container-fluid" id="con1">
+            <div class="carousel">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+                    </div>
+                
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                    <a href="#con2">
+                    <div class="carousel-item active">
+                        <img src="img/1.jpg" alt="" class="d-block w-300"></a>
+                        <div class="carousel-caption">
+                            <h1>基隆</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#con3">
+                        <img src="img/2.jpg" alt="" class="d-block w-300"></a>
+                        <div class="carousel-caption">
+                            <h1>正濱漁港</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#con4">
+                        <img src="img/3.jpg" alt="" class="d-block w-300"></a>
+                        <div class="carousel-caption">
+                            <h1>和平島</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#con5">
+                        <img src="img/4.jpg" alt="" class="d-block w-300"></a>
+                        <div class="carousel-caption">
+                            <h1>忘憂谷</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#con6">
+                        <img src="img/5.jpg" alt="" class="d-block w-300"></a>
+                        <div class="carousel-caption">
+                            <h1>基隆燈塔</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#con7">
+                        <img src="img/6.jpg" alt="" class="d-block w-300"></a>
+                        <div class="carousel-caption">
+                            <h1>廟口夜市</h1>
+                        </div>
+                    </div>
+                    </div>
+                
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="contianer2 container-fluid"></div>
+        <div class="content2 container-fluid position-relative" id="con2" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+            <img src="img/1.jpg" alt="" width="400px" height="300px" class="imgL clear img2">
+            <h1>基隆</h1>
+            <h2>基隆市位於臺灣東北部，古名雞籠，以谷灣之天然港灣著名，是臺灣最北端的都市，
+                位於市中心的基隆港則是北臺灣首要航運樞紐，因而有臺灣頭、臺灣北玄關之稱，亦因氣候多雨別稱雨港、雨都。
+                鄰近雙北生活圈，富有豐富的歷史文化，是一個長期受到輕視的一座美麗的城市。</h2>
+            <h3>圖片來源 基隆市政府</h3>
+            <!-- 了解更多按鈕 -->
+            <a href="https://tour.klcg.gov.tw/zh-hant/" class="btn btn-warning learn-more-btn">了解更多..</a>
+        </div>
+        <div class="contianer1 container-fluid"></div>
+        <div class="content3 container-fluid position-relative" id="con3" data-aos="fade-left" data-aos-offset="400" data-aos-easing="ease-in-sine">
+        <h1>正濱漁港</h1>
+        <h2>舊稱基隆漁港，屬於第一類漁港。
+            日治時代曾經是第一個現代化的繁盛漁港，後來因故，而逐漸沒落。
+            漁港在基隆市政府與地景團隊巧思下華麗轉型成功，保留懷舊面貌並將港邊屋子漆上繽紛色彩，成為近年火紅的拍照打卡點。</h2>
+            <h2>地址：基隆市中正區正濱路72號 | 營業時間：24小時開放</h2>
+            <h3>圖片來源 基隆旅遊網</h3>
+            <img src="img/2.jpg" alt="" width="400px" height="400px" class="imgR clear img2">
+            <a href="https://tour.klcg.gov.tw/zh-hant/" class="btn btn-warning learn-more-btn2">了解更多..</a>
+        </div>
+        <div class="contianer2 container-fluid"></div>
+        <div class="content4 container-fluid position-relative" id="con4" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+            <img src="img/3.jpg" alt="" width="400px" height="400px" class="imgL clear img2">
+            <h1>和平島</h1>
+            <h2>是距離臺灣最近的島嶼，相隔僅有75公尺，其以臺灣第一座跨海大橋「和平橋」連接。
+            「等嶼亭」是島內最著名的拍照景點，最大特色是可以輕鬆遠眺對岸的基隆嶼，且座落在奇岩之上的涼亭，猶如一幅畫。</h2>
+            <h2>地址：基隆市中正區平一路360號 | 備註：需購票</h2>
+            <h3>圖片來源 交通部觀光署</h3>
+            <a href="https://tour.klcg.gov.tw/zh-hant/" class="btn btn-warning learn-more-btn">了解更多..</a>
+        </div>
+        <div class="contianer1 container-fluid"></div>
+        <div class="content5 container-fluid position-relative" id="con5" data-aos="fade-left" data-aos-offset="400" data-aos-easing="ease-in-sine">
+        <h1>忘憂谷</h1>
+        <h2>位於八斗子漁港附近的狹長V型山谷，因為美麗的景色，讓來訪的遊客欣賞後能短暫忘記憂慮而得名；
+            後來這裡的石頭被遊客們留下「忘幽谷」的文字，故「忘憂谷」和「忘幽谷」都能用來形容這一片優美靜謐的山谷。</h2>
+            <h2>地址：基隆市中正區八斗子 | 營業時間：24小時開放</h2>
+            <h3>圖片來源 中華民國交通部觀光署</h3>
+            <img src="img/4.jpg" alt="" width="400px" height="400px" class="imgR clear img2">
+            <a href="https://tour.klcg.gov.tw/zh-hant/" class="btn btn-warning learn-more-btn2">了解更多..</a>
+        </div>
+        <div class="contianer2 container-fluid"></div>
+        <div class="content6 container-fluid position-relative" id="con6" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+            <img src="img/5.jpg" alt="" width="400px" height="400px" class="imgL clear img2">
+            <h1>基隆燈塔</h1>
+            <h2>西元1900年建造完成，具有超過百年歷史的市定古蹟。2024年1月10日起正式對外開放參觀，成為全台第22座開放參觀的燈塔。
+            串聯周邊景點成為登山步道第一站，除了可以俯瞰基隆港景色、欣賞郵輪進出，也可以沿著步道遊覽周邊觀光景點。</h2>
+            <h2>地址：基隆市中山區光華路51號 | 開放時間：依照季節調整</h2>
+            <h3>圖片來源 維基百科</h3>
+            <a href="https://tour.klcg.gov.tw/zh-hant/" class="btn btn-warning learn-more-btn">了解更多..</a>
+        </div>
+        <div class="contianer1 container-fluid"></div>
+        <div class="content7 container-fluid position-relative" id="con7" data-aos="fade-left" data-aos-offset="400" data-aos-easing="ease-in-sine">
+        <h1>基隆(廟口)夜市</h1>
+        <h2>位於臺灣基隆市仁愛區的小吃市集，以仁三路上的奠濟宮為中心聚集，是全臺灣最著名的夜市之一。
+            全天24小時皆有店家在此營業，登記的店家數目達六十多家。每到晚間夜市時段時更為熱鬧，所以也稱為廟口夜市。</h2>
+            <h2>地址：基隆市仁愛區仁三路、愛四路</h2>
+            <h3>圖片來源 中華民國交通部觀光署</h3>
+            <img src="img/6.jpg" alt="" width="400px" height="400px" class="imgR clear img2">
+            <a href="https://tour.klcg.gov.tw/zh-hant/" class="btn btn-warning learn-more-btn2">了解更多..</a>
+        </div>
+        <div class="content8 container-fluid" data-aos="fade-up" data-aos-duration="3000">
+            <h1>參考更多消息</h1><h1>|</h1>
+            <a href="https://www.klccab.gov.tw/"><h2>基隆市文化觀光局</h2></a><h2>|</h2>
+            <a href="https://tour.klcg.gov.tw/zh-hant/"><h2>基隆旅遊網</h2></a><h2>|</h2>
+            <a href="https://www.taiwan.net.tw/m1.aspx?sNo=0001105"><h2>基隆市交通部觀光署</h2></a><h1>|</h1>
+            <i class="fa-brands fa-square-facebook icon" style="color: #005eff;"></i><a href="https://www.facebook.com/KLCCABTW/?locale=zh_TW"><h3>粉絲專頁</h3></a>
+            <i class="fa-solid fa-car icon" style="color: #ff0000;"></i><a href="https://www.klcg.gov.tw/tw/tourism/"><h3>交通資訊</h3></a>
+        </div>
+        <div class="gotop">
+        <a href="#con1"><i class="fa-solid fa-arrow-up fa-flip-horizontal fa-2xl" style="color: #000000;"></i></a>
+        </div>
+    </div>
+    <script src="js/style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 0, // 設定偏移量為 0，減少空白產生的可能性
+        });
+    </script>
+</body>
+</html>
