@@ -1,0 +1,122 @@
+.rectangle{
+
+    height: 320px;
+    width: 1000px;
+    background-color: rgba(250, 235, 215, 0.367);
+
+    display: flex;
+    padding: 20px;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    clear: both; /* clear是用來去除某些設定的 */
+}
+.rectangle img{
+    height: 300px;
+    width: 300px;
+    border: 4.5px double rgb(91, 55, 28);
+    border-radius: 180px;
+    margin: 10px;
+}
+
+/* 調整文字 */
+.rectangle_left_p{
+    position: fixed;
+    right:0px;
+    height: 300px;
+    width: 600px;
+    font-size: 25px;
+
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.rectangle_right_p{
+    position: fixed;
+    left:0px;
+    height: 300px;
+    width: 600px;
+    font-size: 25px;
+
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+/* ------------------- */
+
+.code_left {
+    float: left;
+    margin-left: 100px;
+}
+.code_left img{
+    position: fixed;
+    left:0px;
+}
+
+.code_right{
+    float: right;
+    margin-right: 100px;
+}
+.code_right img{
+    position: fixed;
+    right:0px;
+}
+
+@media (max-width: 1300px) {
+    .rectangle {
+        height: 270px;
+        width: 900px;
+    }
+    .rectangle img{
+        height: 250px;
+        width: 250px;
+        border: 4.5px double rgb(91, 55, 28);
+        border-radius: 180px;
+        margin: 10px;
+    }
+    .rectangle_left_p{
+        font-size: 20px;
+    }
+    .rectangle_right_p{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 930px) {
+    .rectangle {
+        height: 170px;
+        width: 600px;
+        
+    }
+    .rectangle img{
+        height: 150px;
+        width: 150px;
+        border: 4.5px double rgb(91, 55, 28);
+        border-radius: 180px;
+        margin: 10px;
+    }
+    .rectangle_left_p{
+        font-size: 15px;
+        display: flex;
+        width: 400px;
+    }
+    .rectangle_right_p{
+        font-size: 15px;
+        display: flex;
+        width: 400px;
+    }
+    .code_left {
+        float: right;
+        margin-left: 0px;
+    }
+    .code_right{
+        float: left;
+        margin-right: 0px;
+    }
+}
+
+

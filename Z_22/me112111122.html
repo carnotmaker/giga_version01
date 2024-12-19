@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雨中都市個人頁面</title>
+    <style>
+        /* Reset and global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #8fa3b7, #d3dae0);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        /* Rain animation */
+        .rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .drop {
+            position: absolute;
+            width: 2px;
+            height: 30px;
+            background: rgba(100, 123, 145, 0.8);
+            animation: fall 1s linear infinite;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+                opacity: 0.7;
+            }
+            100% {
+                top: 100vh;
+                opacity: 0.1;
+            }
+        }
+
+        /* Main container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #647b91;
+            color: #ffffff;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 1px 1px #2a3f56;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 10px 0;
+            border-bottom: 1px dashed #647b91;
+        }
+
+        h2 {
+            color: #3e4f5e;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: '☔ ';
+            padding-left: 20px;
+        }
+
+        form label {
+            font-weight: bold;
+            color: #3e4f5e;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f4f7;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #3e4f5e;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: 1px 1px #2a3f56;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2a3f56;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            background-color: #647b91;
+            color: #ffffff;
+            font-size: 0.9rem;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            ul {
+                padding-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rain"></div>
+    <div class="container">
+        <header>
+            <h1>個人自介</h1>
+        </header>
+        <section class="basic-info">
+            <h2>基本資訊 🏙️</h2>
+            <p><strong>名字：</strong>周廉恆</p>
+            <p><strong>出生年月日：</strong>2004/7/10</p>
+            <p><strong>星座：</strong>巨蟹座</p>
+            <p><strong>血型：</strong>O型</p>
+        </section>
+        <section class="interests">
+            <h2>興趣 🌧️</h2>
+            <ul>
+                <li>慢跑</li>
+                <li>攝影</li>
+                <li>程序邏輯</li>
+            </ul>
+        </section>
+        <section class="learning">
+            <h2>正在精進 📚</h2>
+            <ul>
+                <li>CSS、JS等網頁設計類</li>
+                <li>C#、python</li>
+                <li>街頭與人像攝影</li>
+                <li>國際語言，英文的精進 </li>
+            </ul>
+        </section>
+        <section class="role">
+            <h2>我在這個團隊的角色 🌃</h2>
+            <p>提供基隆資訊的文案、首頁等頁面製作的前端工程師。</p>
+        </section>
+        <section class="message-board">
+            <h2>留言板 🌫️</h2>
+            <form>
+                <label for="name">名字：</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="message">留言：</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+                <button type="submit">☔ 留下雨中寄語 ☔</button>
+            </form>
+        </section>
+        <a href="index.html">
+            <footer> <p>回到首頁</p></footer>
+        </a>
+        
+    </div>
+
+
+
+
+    <script>
+        const rainContainer = document.querySelector('.rain');
+        const totalDrops = 150;
+
+        for (let i = 0; i < totalDrops; i++) {
+            const drop = document.createElement('div');
+            drop.classList.add('drop');
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = Math.random() * 0.5 + 0.5 + 's';
+            drop.style.animationDelay = Math.random() * 2 + 's';
+            rainContainer.appendChild(drop);
+        }
+    </script>
+
+    
+</body>
+</html>

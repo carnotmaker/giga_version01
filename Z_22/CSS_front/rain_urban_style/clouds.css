@@ -1,0 +1,101 @@
+#wrapper {
+    margin: 0% 0;
+    /* pointer-events: none; */
+
+}
+
+/*雲的造型*/
+.cloud {
+    background: #474646;
+    width: 320px;
+    border-radius: 200px;
+    position: fixed;
+    height: 90px;
+    margin: 30px 0 30px 0;
+    z-index: 1;
+
+}
+
+.cloud:after {
+    content: "";
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    background: #474646;
+    display: inline-block;
+    top: -70px;
+    right: 30px;
+    border-radius: 100%;
+    z-index: 1;
+
+}
+
+.cloud:before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background: #474646;
+    display: block;
+    top: -30px;
+    left: 30px;
+    border-radius: 100%;
+    z-index: 2;
+
+}
+
+/*不同大小的雲 不同大小的雲跑的速度不同*/
+/* 這是第一隊 */
+.XL-cloud {
+    transform: scale(1.2);
+    animation: floating-cloud 10s 5s linear infinite;
+    -webkit-animation: floating-cloud 20s 4s linear infinite;
+    /* margin: 50px 0px 50px 0px; */
+}
+
+.L-cloud {
+    animation: floating-cloud 12s 5s linear infinite;
+    -webkit-animation: floating-cloud 26s 0.2s linear infinite;
+    transform: scale(1.0);
+    /* margin: 40px 0px 40px 0px; */
+}
+
+.M-cloud {
+    animation: floating-cloud 16s 5s linear infinite;
+    -webkit-animation: floating-cloud 16s 3s linear infinite;
+    transform: scale(0.8);
+}
+
+/* 這是第二隊 */
+.XL-cloud2 {
+    transform: scale(1.2);
+    animation: floating-cloud 12s 5s linear infinite;
+    -webkit-animation: floating-cloud 26s 4s linear infinite;
+    /* margin: 50px 0px 50px 0px; */
+}
+
+.L-cloud2 {
+    animation: floating-cloud 14s 5s linear infinite;
+    -webkit-animation: floating-cloud 30s 0.2s linear infinite;
+    transform: scale(1.0);
+    /* margin: 40px 0px 40px 0px; */
+}
+
+.M-cloud2 {
+    animation: floating-cloud 16s 7s linear infinite;
+    -webkit-animation: floating-cloud 20s 3s linear infinite;
+    transform: scale(0.8);
+}
+/* 這是第二隊 */
+
+
+/*關鍵影格部分*/
+@keyframes floating-cloud {
+    0% {
+        margin-left: -600px;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
